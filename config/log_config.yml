@@ -1,0 +1,21 @@
+version: 1
+
+formatters:
+  simple:
+    format: "%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s"
+
+handlers:
+  console:
+      class: logging.StreamHandler
+      level: INFO
+      formatter: simple
+
+  file_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: default.log
+    formatter: simple
+
+root:
+  level: INFO
+  handlers: [console, file_handler]

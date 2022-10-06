@@ -1,0 +1,28 @@
+{
+  "model": {
+  	"pool_layer": {
+  		"name": "NetVLAD++",
+  		"vocab_size": 64
+  	},
+    "streams": {
+    	"audio": {
+       "features": "vggish"
+      }
+    },
+    "window_size_sec": 20,
+    "frame_rate": 2,
+    "nms": {
+      "window_sec": 40,
+      "threshold": 0.0
+    },
+    "num_classes": 17
+  },
+  "optimization": {
+  	"max_epochs": 10000,
+  	"batch_size": 256,
+    "learning_rate": 0.001,
+    "learning_rate_end": 0.00000001,
+    "patience": 10,
+    "random_seed": 0
+  }
+}

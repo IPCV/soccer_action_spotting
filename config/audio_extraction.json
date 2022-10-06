@@ -1,0 +1,11 @@
+{
+  "sample_rate": 16000,
+  "stft_window_length_seconds": 0.025,
+  "stft_hop_length_seconds": 0.010,
+  "num_mel_bins": 64,
+  "mel_min_hz": 125,
+  "mel_max_hz": 7500,
+  "log_offset": 0.01,
+  "example_window_seconds": 0.46,
+  "example_hop_seconds": 0.46
+}

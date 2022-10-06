@@ -1,0 +1,5 @@
+\begin{tabular}{ | l | l | c | c | c |{% for c in classes %} c |{% endfor %}}
+\hline
+& \textbf{SoccerNet-v2} & visible & not-shown {% for c in classes %}& \textbf{{'{'}}{{c}}{{'}'}}{% endfor %}\\ \hline
+{% for result in results %}{{result['method']}}&{% if result['a_mAP'] == best['a_mAP'] %}\textbf{{'{'}}{{'%.2f' % result['a_mAP']}}{{'}'}} &{% else %}{{'%.2f' % result['a_mAP']}} &{% endif %}{% if result['a_mAP_visible'] == best['a_mAP_visible'] %}\textbf{{'{'}}{{'%.2f' % result['a_mAP_visible']}}{{'}'}}{% else %}{{'%.2f' % result['a_mAP_visible']}}{% endif %} & {% if result['a_mAP_unshown'] == best['a_mAP_unshown'] %}\textbf{{'{'}}{{'%.2f' % result['a_mAP_unshown']}}{{'}'}}{% else %}{{'%.2f' % result['a_mAP_unshown']}}{% endif %} {% for i in range(classes|length) %} & {% if result['a_mAP_per_class'][i] == best['a_mAP_per_class'][i] %}\textbf{{'{'}}{{'%.2f' % result['a_mAP_per_class'][i]}}{{'}'}}{% else %}{{'%.2f' % result['a_mAP_per_class'][i]}}{% endif %}{% endfor %} \\ \hline
+{% endfor %}\end{tabular}

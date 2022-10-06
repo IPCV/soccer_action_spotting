@@ -1,0 +1,53 @@
+<style>
+.rotated {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+</style>
+
+<table>
+<thead>
+  <tr>
+    <th></th><!-- Method -->
+    <th class="rotated"><b>SoccerNet-v2</b></th>
+    <th class="rotated">visible</th>
+    <th class="rotated">not-shown</th>
+    {% for c in classes %}
+    <th class="rotated">{{c}}</th>
+    {% endfor %}
+  </tr>
+</thead>
+<tbody>
+  {% for result in results %}
+  <tr>
+    <td>{{result['method']}}</td>
+
+    {% if result['a_mAP'] == best['a_mAP'] %}
+    <td><b>{{'%.2f' % result['a_mAP']}}</b></td>
+    {% else %}
+    <td>{{'%.2f' % result['a_mAP']}}</td>
+    {% endif %}
+
+    {% if result['a_mAP_visible'] == best['a_mAP_visible'] %}
+    <td><b>{{'%.2f' % result['a_mAP_visible']}}</b></td>
+    {% else %}
+    <td>{{'%.2f' % result['a_mAP_visible']}}</td>
+    {% endif %}
+
+    {% if result['a_mAP_unshown'] == best['a_mAP_unshown'] %}
+    <td><b>{{'%.2f' % result['a_mAP_unshown']}}</b></td>
+    {% else %}
+    <td>{{'%.2f' % result['a_mAP_unshown']}}</td>
+    {% endif %}
+
+    {% for i in range(classes|length) %}
+      {% if result['a_mAP_per_class'][i] == best['a_mAP_per_class'][i] %}
+      <td><b>{{'%.2f' % result['a_mAP_per_class'][i]}}</b></td>
+      {% else %}
+      <td>{{'%.2f' % result['a_mAP_per_class'][i]}}</td>
+      {% endif %}
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
