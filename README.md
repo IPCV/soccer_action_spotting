@@ -13,7 +13,7 @@ The code is documented and designed to be easy to extend. If you use it in your 
 
 ## Citation
 
-If you use this code, please cite the following paper:
+The paper is available as an [arXiv report](https://arxiv.org/abs/2211.12334). If you use this code, please cite the following paper:
 
 Alejandro Cartas, Coloma Ballester, and Gloria Haro. "A Graph-Based Method for Soccer Action Spotting Using Unsupervised Player Classification" ACM MMSports Workshop (2022).
 
