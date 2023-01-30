@@ -137,3 +137,9 @@ optional arguments:
 ## Data
 
 The annotated data corresponds to the second half of the match *england_epl/2014-2015/2015-02-21 - 18-00 Chelsea 1 - 1 Burnley*. The data can be downloaded from [here](https://drive.google.com/file/d/1D5YUORpFp_LzreEpcMU2rfcS2x7YDJIF/view?usp=sharing).
+
+## Acknowledgements
+
+The authors acknowledge support by MICINN/FEDER UE project, ref. PID2021-127643NB-I00, H2020-MSCA-RISE-2017 project, ref. 777826 NoMADS, and ReAViPeRo network, ref. RED2018-102511-T.
+
+![Ministerio](assets/logo_ministerio.png)
